@@ -17,36 +17,33 @@ public class JoinTest extends JFrame {
 
 	private static final long serialVersionUID = 1L;
 
-	public JoinTest()
-	{
+	public JoinTest() {
 		this.add(new DrawPanel());
-		this.setSize(800,600);
+		this.setSize(800, 600);
 		this.setVisible(true);
 	}
-	
+
 	public static void main(String[] args) {
-		
+
 		new JoinTest();
-		
+
 	}
 
-	class DrawPanel extends JPanel implements MouseMotionListener
-	{
+	class DrawPanel extends JPanel implements MouseMotionListener {
 		private static final long serialVersionUID = 1L;
-		
+
 		int drawX = 0, drawY = 0;
 
-		public DrawPanel()
-		{
+		public DrawPanel() {
 			this.addMouseMotionListener(this);
 		}
-		
+
 		@Override
 		protected void paintComponent(Graphics g) {
 			g.clearRect(0, 0, 800, 600);
 			g.drawString("zzzzzzz", drawX, drawY);
 		}
-		
+
 		@Override
 		public void mouseDragged(MouseEvent e) {
 			drawX = e.getX();
@@ -56,8 +53,8 @@ public class JoinTest extends JFrame {
 
 		@Override
 		public void mouseMoved(MouseEvent e) {
-			
+
 		}
-		
+
 	}
 }
